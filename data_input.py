@@ -4,8 +4,8 @@ import csv
 from collections import defaultdict
 
 # Labels to collect
-labels = ['thumbs_up', 'peace', 'ok', 'fist', 'fkyu', 'infinite_void',]
-current_label = 'thumbs_up'
+labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+current_label = 'A'
 samples = []
 sample_counts = defaultdict(int)
 

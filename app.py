@@ -47,7 +47,29 @@ class HandSignPredictor(VideoTransformerBase):
 
         return image
 
-st.title("🖐️ Real-Time Hand Sign Classifier")
-st.write("Recognizing: thumbs up, peace, ok, fist, fkyu, infinite void")
+st.set_page_config(page_title="Sign Language Detector", layout="centered")
+
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f0f2f6;
+    }
+    .title {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 0.3em;
+    }
+    .subtitle {
+        text-align: center;
+        color: #555;
+        font-size: 1.2em;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Main title and stream
+st.markdown('<div class="title">🖐️ Real-Time Sign Language Classifier</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Using your webcam to recognize ASL alphabet signs</div>', unsafe_allow_html=True)
+st.markdown("---")
 
 webrtc_streamer(key="hand-sign", video_transformer_factory=HandSignPredictor)
